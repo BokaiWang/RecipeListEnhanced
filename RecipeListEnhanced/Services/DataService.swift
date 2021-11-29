@@ -30,6 +30,11 @@ class DataService {
                 // Add the unique Ids
                 for r in parsedJson {
                     r.id = UUID()
+                    
+                    // Add unique Ids to recipe ingredients
+                    for i in r.ingredients {
+                        i.id = UUID()
+                    }
                 }
                 // the right data
                 return parsedJson

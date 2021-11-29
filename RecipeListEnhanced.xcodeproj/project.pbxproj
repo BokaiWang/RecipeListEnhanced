@@ -17,6 +17,7 @@
 		E1661254274DBEA000A4559E /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1661253274DBEA000A4559E /* DataService.swift */; };
 		E1661256274DC9DF00A4559E /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1661255274DC9DF00A4559E /* RecipeDetailView.swift */; };
 		E166129E2751B41800A4559E /* RecipeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E166129D2751B41800A4559E /* RecipeTabView.swift */; };
+		E1BD8EFE27558FCC00FD12E8 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BD8EFD27558FCC00FD12E8 /* Ingredient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		E1661253274DBEA000A4559E /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		E1661255274DC9DF00A4559E /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 		E166129D2751B41800A4559E /* RecipeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTabView.swift; sourceTree = "<group>"; };
+		E1BD8EFD27558FCC00FD12E8 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				E166124F274DBABC00A4559E /* Recipe.swift */,
+				E1BD8EFD27558FCC00FD12E8 /* Ingredient.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				E1661256274DC9DF00A4559E /* RecipeDetailView.swift in Sources */,
 				E1661252274DBC3C00A4559E /* RecipeModel.swift in Sources */,
 				E166123D274DB8FA00A4559E /* RecipeListView.swift in Sources */,
+				E1BD8EFE27558FCC00FD12E8 /* Ingredient.swift in Sources */,
 				E166123B274DB8FA00A4559E /* RecipeListEnhancedApp.swift in Sources */,
 				E1661254274DBEA000A4559E /* DataService.swift in Sources */,
 				E166129E2751B41800A4559E /* RecipeTabView.swift in Sources */,
