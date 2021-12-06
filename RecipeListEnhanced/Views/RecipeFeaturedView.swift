@@ -11,6 +11,7 @@ struct RecipeFeaturedView: View {
     
     @EnvironmentObject var model:RecipeModel
     @State var isDetailViewShowing = false
+    @State var tabSelectionIndex = 0
     
     var body: some View {
         
@@ -24,7 +25,7 @@ struct RecipeFeaturedView: View {
             
             GeometryReader { geo in
                 
-                TabView {
+                TabView(selection: $tabSelectionIndex) {
                     
                     ForEach(0..<model.recipes.count) { index in
                         
@@ -49,8 +50,9 @@ struct RecipeFeaturedView: View {
                                     } // VStack
                                 } // ZStack
                             })
-                                .buttonStyle(PlainButtonStyle())
-                                .sheet(isPresented: $isDetailViewShowing, content: {
+                            .tag(index)
+                            .buttonStyle(PlainButtonStyle())
+                            .sheet(isPresented: $isDetailViewShowing, content: {
                                     RecipeDetailView(recipe: model.recipes[index])
                                 })
                             .frame(width: geo.size.width - 40, height: geo.size.height - 100, alignment: .center)
@@ -67,13 +69,25 @@ struct RecipeFeaturedView: View {
             VStack(alignment:.leading, spacing: 10) {
                 Text("Preparation Time:")
                     .font(.headline)
-                Text("1 hour")
+                Text(model.recipes[tabSelectionIndex].prepTime)
                 Text("Highlights")
                     .font(.headline)
-                Text("Healthy, Hearty")
+                RecipeHighlights(highlights: model.recipes[tabSelectionIndex].highlights)
             }
             .padding([.bottom, .leading])
         }
+        .onAppear {
+            setFeaturedIndex()
+        }
+        
+        
+    }
+    
+    func setFeaturedIndex() {
+        
+        tabSelectionIndex = model.recipes.firstIndex { r in
+            return r.featured
+        } ?? 0
     }
 }
 
